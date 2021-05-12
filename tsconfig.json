@@ -27,6 +27,6 @@
             "@test": ["test"]
         }
     },
-    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/header/index.spec.js", "src/pages/index.js", "src/pages/_document.js"],
     "exclude": ["node_modules", "test/*"]
 }

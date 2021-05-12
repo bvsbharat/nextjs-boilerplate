@@ -1,6 +1,6 @@
 # nextjs-boilerplate
 
-This project was generated with [superplate](https://github.com/pankod/superplate).
+Next Js Boilerplate with Redux-thunk, Jest Unit Testing, TailWind CSS.
 
 ## Getting Started
 
@@ -13,7 +13,7 @@ Every plugin comes with an example to give you a brief knowledge about their usa
 ### Running the development server.
 
 ```bash
-    npm run dev
+    npm run dev 
 ```
 
 ### Building for production.

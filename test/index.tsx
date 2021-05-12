@@ -5,8 +5,6 @@ import {
     RenderResult,
 } from "@testing-library/react";
 
-import { Provider } from "react-redux";
-import store from "@redux/store";
 
 /**
  * Custom renderer example with @testing-library/react
@@ -19,7 +17,7 @@ import store from "@redux/store";
 export const AllTheProviders = ({ children }) => {
     return (
         <>
-            <Provider store={store}>{children}</Provider>
+            {children}
         </>
     );
 };
