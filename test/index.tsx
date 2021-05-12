@@ -1,20 +1,16 @@
-import React, { ReactElement } from "react";
-import {
-    render as baseRender,
-    RenderOptions,
-    RenderResult,
-} from "@testing-library/react";
+import React, { ReactNode } from "react";
+import { mount as mountBase, MountRendererProps, ReactWrapper } from "enzyme";
 
 
 /**
- * Custom renderer example with @testing-library/react
+ * Custom renderer example with enzyme
  * You can customize it to your needs.
  *
  * To learn more about customizing renderer,
- * please visit https://testing-library.com/docs/react-testing-library/setup
+ * please visit https://enzymejs.github.io/enzyme/
  */
 
-export const AllTheProviders = ({ children }) => {
+const AllTheProviders = ({ children }) => {
     return (
         <>
             {children}
@@ -22,11 +18,12 @@ export const AllTheProviders = ({ children }) => {
     );
 };
 
-const render = (ui: ReactElement, options?: Omit<RenderOptions, "queries">) =>
-    baseRender(ui, { wrapper: AllTheProviders, ...options }) as RenderResult;
-
-// re-export everything
-export * from "@testing-library/react";
+const mount: (node: ReactNode, options?: MountRendererProps) => ReactWrapper = (
+    node,
+    options,
+) => {
+    return mountBase(<AllTheProviders>{node}</AllTheProviders>, options);
+};
 
 // override render method
-export { render };
+export default mount;

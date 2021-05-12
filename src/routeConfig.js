@@ -1,6 +1,6 @@
 const routes = [
-    { name: "Dashboard", link: "dashboard" },
-    { name: "Post", link: "post" },
+    // { name: "Dashboard", href: "dashboard", current: true },
+    { name: "Some Link", href: "post", current: false },
 ];
 
 export { routes };

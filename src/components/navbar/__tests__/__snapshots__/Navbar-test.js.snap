@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Navbar Should render correctly 1`] = `
+exports[`Navbar renders without crashing 1`] = `
 <nav
-  className="w-full mx-auto bg-white shadow"
+  className="w-full mx-auto bg-white shadow "
 >
   <div
-    className="container px-6 justify-between h-16 flex items-center lg:items-stretch mx-auto"
+    className="container px-6 justify-between h-16 flex items-center lg:items-stretch mx-auto nav-wrapper"
   >
     <div
       className="h-full flex items-center"
