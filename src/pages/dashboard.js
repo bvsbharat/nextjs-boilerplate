@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { setData } from "../redux/action";
+import { set } from "../redux";
 import { Layout } from "@components";
 
 export default function Dashboard() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(setData({ data: "loading data" }));
+        dispatch(set("data", { data: "loading data" }));
     }, []);
 
     return (

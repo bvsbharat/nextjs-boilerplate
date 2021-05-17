@@ -1,7 +1,6 @@
 import React from "react";
 import "tailwindcss/tailwind.css";
-import "@styles/global.scss";
-import { Navbar, Footer } from "@components";
+import "../styles/global.scss";
 import { wrapper } from "../redux";
 
 function MyApp({ Component, pageProps }) {

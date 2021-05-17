@@ -7,12 +7,8 @@ describe("Navbar", () => {
 
     it("renders without crashing", () => {
         expect(component).toBeTruthy();
-        const componentRender = renderer.create(<Navbar />);
+        const componentRender = renderer.create(<Navbar className="navbar" />);
         const tree = componentRender.toJSON();
         expect(tree).toMatchSnapshot();
-    });
-
-    it("cards length must be equal to the length of the meta data ", () => {
-        expect(component.find(".nav-wrapper").length).toEqual(1);
     });
 });
